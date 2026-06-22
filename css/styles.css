@@ -228,6 +228,12 @@ form button:hover {
     margin: 18px 0 24px;
 }
 
+.search-hint {
+    margin: 0;
+    color: var(--blue-dark);
+    font-size: 0.95rem;
+}
+
 label {
     color: var(--text);
     font-weight: 700;
