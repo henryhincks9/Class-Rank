@@ -57,7 +57,12 @@ This project includes `render.yaml` so Render can detect and deploy the app auto
 4. Add environment variables in Render:
    - `FLASK_SECRET_KEY` with a secure secret value
    - `DATABASE_URL` optionally if you use a hosted database
+   - `RATE_LIMIT_DEFAULTS` like `5000 per day,1000 per hour`
+   - `RATE_LIMIT_REGISTER` like `30 per minute`
+   - `RATE_LIMIT_LOGIN` like `60 per minute`
+   - `RATE_LIMIT_REVIEW_POST` like `120 per hour`
    - `SESSION_COOKIE_SECURE` optionally set to `true` for HTTPS-only cookies
+   - `REDIS_URL` (recommended) so rate limiting is shared across workers/instances
 5. Deploy the service.
 
 Render gives you an HTTPS URL like `https://<your-app>.onrender.com` automatically.
@@ -163,6 +168,36 @@ Run tests:
 ```powershell
 python -m pytest -q
 ```
+
+## Load testing (school rollout check)
+
+Use the included lightweight load tester to simulate traffic and enforce pass/fail thresholds.
+
+1. Start the app (local):
+
+```powershell
+.\serve.ps1
+```
+
+2. In another terminal, run the load test:
+
+```powershell
+python load_test.py --duration 30 --concurrency 40 --max-error-rate 0.02 --max-p95-ms 700 --min-rps 20
+```
+
+Recommended baseline thresholds before school rollout:
+
+- Error rate: <= 2%
+- p95 latency: <= 700 ms
+- Throughput: >= 20 RPS
+
+Suggested progression:
+
+- Start at 25 concurrency for 20s
+- Move to 40 concurrency for 30s
+- Move to 60 concurrency for 60s
+
+If thresholds fail, scale up compute, enable Redis for limiter state (`REDIS_URL`), and consider moving to Postgres for higher concurrent write capacity.
 
 Database migrations
 

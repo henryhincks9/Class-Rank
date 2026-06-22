@@ -10,7 +10,10 @@ def test_home_page_loads():
     if sync_playwright is None:
         pytest.skip('playwright not installed in this environment')
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        try:
+            browser = p.chromium.launch(headless=True)
+        except Exception:
+            pytest.skip('playwright browser binaries not installed (run: playwright install)')
         page = browser.new_page()
         try:
             page.goto('http://localhost:5500/', timeout=5000)

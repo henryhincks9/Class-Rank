@@ -18,12 +18,25 @@ SCHOOL_EMAIL_DOMAIN = "@go.dsdmail.net"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+
+def env_bool(name, default=False):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in ("1", "true", "yes", "on")
+
+
+def env_limits(name, default_csv):
+    raw = os.environ.get(name, default_csv)
+    limits = [part.strip() for part in raw.split(",") if part.strip()]
+    return limits or [default_csv]
+
 app = Flask(__name__, static_folder=str(ROOT), static_url_path="")
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "dev-secret-key"
 app.config.update(
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax',
-    SESSION_COOKIE_SECURE=bool(os.environ.get('SESSION_COOKIE_SECURE', False)),
+    SESSION_COOKIE_SECURE=env_bool('SESSION_COOKIE_SECURE', False),
 )
 
 # SQLAlchemy setup (optional; keeps compatibility with existing sqlite file)
@@ -39,16 +52,53 @@ with app.app_context():
 
 # Rate limiter
 limiter_storage = os.environ.get('REDIS_URL') or os.environ.get('LIMITER_STORAGE_URI')
+default_limits = env_limits('RATE_LIMIT_DEFAULTS', '200 per day,50 per hour')
+register_limit = os.environ.get('RATE_LIMIT_REGISTER', '5 per minute')
+login_limit = os.environ.get('RATE_LIMIT_LOGIN', '10 per minute')
+review_post_limit = os.environ.get('RATE_LIMIT_REVIEW_POST', '30 per hour')
+
+
+def rate_limit_key():
+    user_id = session.get('user_id')
+    if user_id is not None:
+        return f"user:{user_id}"
+    forwarded_for = request.headers.get('X-Forwarded-For', '').split(',')[0].strip()
+    ip = forwarded_for or get_remote_address() or 'unknown'
+    return f"ip:{ip}"
+
+
+def login_rate_limit_key():
+    payload = request.get_json(silent=True) or {}
+    identifier = str(payload.get('username', '')).strip().lower() or 'anonymous'
+    forwarded_for = request.headers.get('X-Forwarded-For', '').split(',')[0].strip()
+    ip = forwarded_for or get_remote_address() or 'unknown'
+    return f"login:{ip}:{identifier}"
+
+
+def register_rate_limit_key():
+    payload = request.get_json(silent=True) or {}
+    email = str(payload.get('email', '')).strip().lower()
+    username = str(payload.get('username', '')).strip().lower()
+    identifier = email or username or 'anonymous'
+    forwarded_for = request.headers.get('X-Forwarded-For', '').split(',')[0].strip()
+    ip = forwarded_for or get_remote_address() or 'unknown'
+    return f"register:{ip}:{identifier}"
+
+
 if limiter_storage:
-    limiter = Limiter(key_func=get_remote_address, storage_uri=limiter_storage, default_limits=["200 per day", "50 per hour"])
+    limiter = Limiter(key_func=rate_limit_key, storage_uri=limiter_storage, default_limits=default_limits)
 else:
-    limiter = Limiter(key_func=get_remote_address, default_limits=["200 per day", "50 per hour"]) 
+    limiter = Limiter(key_func=rate_limit_key, default_limits=default_limits)
 limiter.init_app(app)
 
 
 def get_db():
-    conn = sqlite3.connect(DB_FILE, check_same_thread=False)
+    conn = sqlite3.connect(DB_FILE, check_same_thread=False, timeout=10)
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA synchronous=NORMAL")
+    conn.execute("PRAGMA foreign_keys=ON")
+    conn.execute("PRAGMA busy_timeout=10000")
     return conn
 
 
@@ -270,7 +320,7 @@ def me():
 
 
 @app.route("/api/register", methods=["POST"])
-@limiter.limit("5 per minute")
+@limiter.limit(register_limit, key_func=register_rate_limit_key)
 def register():
     payload = request.get_json(silent=True) or {}
     username = payload.get("username", "").strip()
@@ -304,7 +354,7 @@ def register():
 
 
 @app.route("/api/login", methods=["POST"])
-@limiter.limit("10 per minute")
+@limiter.limit(login_limit, key_func=login_rate_limit_key)
 def login():
     payload = request.get_json(silent=True) or {}
     login_value = payload.get("username", "").strip()
@@ -340,6 +390,7 @@ def get_course(course_id):
 
 
 @app.route("/api/reviews", methods=["GET", "POST"])
+@limiter.limit(review_post_limit, methods=["POST"])
 def reviews():
     if request.method == "GET":
         course_id = request.args.get("courseId", type=int)
@@ -354,9 +405,6 @@ def reviews():
                 pass
         return jsonify(results)
 
-    # apply stricter rate limiting for posting reviews
-    if request.method == 'POST':
-        limiter.limit("30 per hour")(lambda: None)()
     user = current_user()
     if not user:
         return jsonify({"message": "Authentication required."}), 401
@@ -465,16 +513,6 @@ def health():
     return jsonify({"status": "ok"})
 
 
-@app.route("/<path:path>")
-def static_files(path):
-    return send_from_directory(ROOT, path)
-
-
-if __name__ == "__main__":
-    init_db()
-    app.run(host="0.0.0.0", port=5500, debug=True)
-
-
 @app.after_request
 def set_security_headers(response):
     response.headers.setdefault('X-Content-Type-Options', 'nosniff')
@@ -482,6 +520,16 @@ def set_security_headers(response):
     response.headers.setdefault('Referrer-Policy', 'strict-origin-when-cross-origin')
     response.headers.setdefault('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
     response.headers.setdefault('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';")
-    if os.environ.get('SESSION_COOKIE_SECURE', 'False').lower() in ('1', 'true', 'yes'):
+    if env_bool('SESSION_COOKIE_SECURE', False):
         response.headers.setdefault('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
     return response
+
+
+@app.route("/<path:path>")
+def static_files(path):
+    return send_from_directory(ROOT, path)
+
+
+if __name__ == "__main__":
+    init_db()
+    app.run(host="0.0.0.0", port=5500, debug=env_bool('FLASK_DEBUG', True))

@@ -15,3 +15,11 @@ services:
         sync: false
       - key: SESSION_COOKIE_SECURE
         value: "true"
+      - key: RATE_LIMIT_DEFAULTS
+        value: "5000 per day,1000 per hour"
+      - key: RATE_LIMIT_REGISTER
+        value: "30 per minute"
+      - key: RATE_LIMIT_LOGIN
+        value: "60 per minute"
+      - key: RATE_LIMIT_REVIEW_POST
+        value: "120 per hour"
