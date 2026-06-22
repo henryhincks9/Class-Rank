@@ -1,10 +1,11 @@
 import os
 from server import init_db, get_db
 from werkzeug.security import generate_password_hash
-from datetime import datetime
+from datetime import datetime, timezone
 
 ADMIN_USER = os.environ.get('FLASK_ADMIN_USER', 'admin')
 ADMIN_PW = os.environ.get('FLASK_ADMIN_PW', None)
+ADMIN_EMAIL = os.environ.get('FLASK_ADMIN_EMAIL', 'admin@davis.k12.ut.us')
 
 if __name__ == '__main__':
     init_db()
@@ -14,9 +15,9 @@ if __name__ == '__main__':
         cur.execute("SELECT id FROM users WHERE username = ?", (ADMIN_USER,))
         row = cur.fetchone()
         if row:
-            cur.execute("UPDATE users SET password_hash = ?, role = ? WHERE username = ?", (generate_password_hash(ADMIN_PW), 'admin', ADMIN_USER))
+            cur.execute("UPDATE users SET email = ?, password_hash = ?, role = ? WHERE username = ?", (ADMIN_EMAIL, generate_password_hash(ADMIN_PW), 'admin', ADMIN_USER))
         else:
-            cur.execute("INSERT INTO users (username, password_hash, role, created_at) VALUES (?, ?, ?, ?)", (ADMIN_USER, generate_password_hash(ADMIN_PW), 'admin', datetime.utcnow().isoformat()))
+            cur.execute("INSERT INTO users (username, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)", (ADMIN_USER, ADMIN_EMAIL, generate_password_hash(ADMIN_PW), 'admin', datetime.now(timezone.utc).isoformat()))
         conn.commit()
         conn.close()
         print('Admin user set/updated.')
@@ -48,7 +49,7 @@ if __name__ == '__main__':
             if r:
                 demo_user_id = r[0]
             else:
-                cur.execute("INSERT INTO users (username, password_hash, role, created_at) VALUES (?, ?, ?, ?)", ('demo_user', generate_password_hash('demo_pass'), 'user', datetime.utcnow().isoformat()))
+                cur.execute("INSERT INTO users (username, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)", ('demo_user', 'demo_user@davis.k12.ut.us', generate_password_hash('demo_pass'), 'user', datetime.now(timezone.utc).isoformat()))
                 demo_user_id = cur.lastrowid
 
             sample_texts = [
@@ -67,7 +68,7 @@ if __name__ == '__main__':
                 enjoyment = random.randint(3,5)
                 workload = random.randint(2,4)
                 review_text = random.choice(sample_texts)
-                created_at = datetime.utcnow().isoformat()
+                created_at = datetime.now(timezone.utc).isoformat()
                 cur.execute(
                     'INSERT INTO reviews (course_id, user_id, difficulty, enjoyment, workload, review, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
                     (course_id, demo_user_id, difficulty, enjoyment, workload, review_text, created_at)

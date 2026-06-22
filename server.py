@@ -79,6 +79,17 @@ def init_db():
     """)
     conn.commit()
 
+    cursor.execute("PRAGMA table_info(users)")
+    cols = [r[1] for r in cursor.fetchall()]
+    if "email" not in cols:
+        cursor.execute("ALTER TABLE users ADD COLUMN email TEXT")
+        conn.commit()
+        try:
+            cursor.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email)")
+            conn.commit()
+        except sqlite3.OperationalError:
+            pass
+
     # Ensure 'flagged' column exists on reviews for moderation
     cursor.execute("PRAGMA table_info(reviews)")
     cols = [r[1] for r in cursor.fetchall()]
@@ -93,17 +104,6 @@ def init_db():
             ("admin", "admin@davis.k12.ut.us", generate_password_hash("admin123"), "admin", datetime.now(timezone.utc).isoformat()),
         )
         conn.commit()
-
-    cursor.execute("PRAGMA table_info(users)")
-    cols = [r[1] for r in cursor.fetchall()]
-    if "email" not in cols:
-        cursor.execute("ALTER TABLE users ADD COLUMN email TEXT")
-        conn.commit()
-        try:
-            cursor.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email)")
-            conn.commit()
-        except sqlite3.OperationalError:
-            pass
     conn.close()
 
 
