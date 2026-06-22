@@ -9,6 +9,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      FLASK_SECRET_KEY: test-secret-key
+      FLASK_ADMIN_PW: admin123
+      SESSION_COOKIE_SECURE: false
+      DATABASE_URL: sqlite:///data/app.db
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
