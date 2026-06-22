@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Rank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <div>
+            <h1>Class Rank</h1>
+            <p>Helping Farmington High School students choose classes</p>
+        </div>
+        <div class="user-panel">
+            <span id="userName"></span>
+            <button id="loginButton" class="secondary-button">Login / Register</button>
+            <button id="logoutButton" class="secondary-button hidden">Logout</button>
+        </div>
+    </div>
+    <nav class="site-nav">
+        <button data-nav="home">Home</button>
+        <button data-nav="courses">Courses</button>
+        <button data-nav="rankings">Rankings</button>
+        <button data-nav="admin" id="adminNavButton" class="hidden">Admin</button>
+    </nav>
+</header>
+<main>
+    <section id="homeSection" class="page-section">
+        <h2>Welcome</h2>
+        <p>Search and explore courses, read reviews, and see top-rated classes all from one page.</p>
+        <div class="quick-links">
+            <button data-nav="courses">Browse Courses</button>
+            <button data-nav="rankings">View Rankings</button>
+        </div>
+        <div class="search-panel">
+            <label for="homeSearch">Search courses by name or department</label>
+            <input type="text" id="homeSearch" placeholder="Search for a course...">
+        </div>
+    </section>
+
+    <section id="loginSection" class="page-section hidden">
+        <h2>Login or Register</h2>
+        <div class="auth-grid">
+            <form id="loginForm" class="auth-form">
+                <h3>Login</h3>
+                <div class="form-row">
+                    <label for="loginUsername">Username or School Email</label>
+                    <input id="loginUsername" type="text" placeholder="username or email" required>
+                </div>
+                <div class="form-row">
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" type="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <form id="registerForm" class="auth-form">
+                <h3>Register</h3>
+                <div class="form-row">
+                    <label for="registerUsername">Username</label>
+                    <input id="registerUsername" type="text" required>
+                </div>
+                <div class="form-row">
+                    <label for="registerEmail">School Email</label>
+                    <input id="registerEmail" type="email" placeholder="name@davis.k12.ut.us" required>
+                </div>
+                <div class="form-row">
+                    <label for="registerPassword">Password</label>
+                    <input id="registerPassword" type="password" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+        <p id="authMessage" class="auth-message"></p>
+    </section>
+
+    <section id="coursesSection" class="page-section hidden">
+        <h2>All Courses</h2>
+        <div class="search-panel">
+            <label for="coursesSearch">Filter courses</label>
+            <input type="text" id="coursesSearch" placeholder="Search courses...">
+        </div>
+        <div id="courseContainer" class="cards-grid"></div>
+    </section>
+
+    <section id="courseSection" class="page-section hidden">
+        <button id="backToCourses" class="secondary-button">← Back to Courses</button>
+        <h2 id="courseName">Loading...</h2>
+        <p id="department"></p>
+        <div class="stats-card">
+            <h3>Course Statistics</h3>
+            <p>Average Difficulty: <span id="averageDifficulty">0</span></p>
+            <p>Average Enjoyment: <span id="averageEnjoyment">0</span></p>
+            <p>Average Workload: <span id="averageWorkload">0</span></p>
+        </div>
+        <section class="reviews-section">
+            <h3>Reviews</h3>
+            <div id="reviews"></div>
+        </section>
+        <section class="review-form-section">
+            <h3>Leave a Review</h3>
+            <p id="reviewAuthPrompt" class="auth-message hidden">Please login to leave a review.</p>
+            <form id="reviewForm">
+                <div class="form-row">
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="enjoyment">Enjoyment</label>
+                    <select id="enjoyment">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="workload">Workload</label>
+                    <select id="workload">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <textarea id="reviewText" placeholder="Write review..." rows="5"></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </section>
+
+    <section id="rankingsSection" class="page-section hidden">
+        <h2>Top Rated Courses</h2>
+        <div id="rankingsContainer" class="cards-grid"></div>
+    </section>
+
+    <section id="adminSection" class="page-section hidden">
+        <h2>Admin Panel</h2>
+        <p>Manage reviews and moderate content.</p>
+        <div class="admin-grid">
+            <div>
+                <h3>Reviews</h3>
+                <div id="adminReviewsContainer" class="cards-grid"></div>
+            </div>
+            <div>
+                <h3>Users</h3>
+                <div id="adminUsersContainer" class="cards-grid"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

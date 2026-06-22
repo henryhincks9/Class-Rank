@@ -1,0 +1,1591 @@
+[
+  {
+    "id": 1030,
+    "name": "Fit for Life",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 1040,
+    "name": "Life. Act. - Volleyball",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 1042,
+    "name": "Social Dance",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 1050,
+    "name": "Body Conditioning",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 1052,
+    "name": "Team Conditioning",
+    "department": "Physical Education",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 1060,
+    "name": "Yoga",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 1275,
+    "name": "DrillTeam",
+    "department": "Physical Education",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 1280,
+    "name": "CE 1010 Dance",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2105,
+    "name": "Art Foundations Il",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2107,
+    "name": "Painting 1 - Acrylic",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2108,
+    "name": "Painting2-Water Color",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2109,
+    "name": "Painting 3 Gouache",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2110,
+    "name": "Drawing |",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2113,
+    "name": "Ceramics |",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2114,
+    "name": "Ceramics 2/3",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2118,
+    "name": "3D Design -Innov. Artistry",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2120,
+    "name": "Sculpture 1",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2127,
+    "name": "AP Art and Design",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 2129,
+    "name": "AP Art History",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 2130,
+    "name": "CE 1030 Studio Art",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2131,
+    "name": "CE 1110 Drawing\u2019",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2140,
+    "name": "Jewelry 1",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2141,
+    "name": "Jewelry 2",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2142,
+    "name": "Jewelry 3",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2150,
+    "name": "Printmaking",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2164,
+    "name": "3D Design -Stained Glass 1",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2165,
+    "name": "3D Design -Stained Glass 2",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2166,
+    "name": "3D Design\u2014Stained Glass3",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2220,
+    "name": "Concert Band",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2224,
+    "name": "Percussion",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2225,
+    "name": "Jazz Ensemble",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2227,
+    "name": "Wind Ensemble",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2250,
+    "name": "Ind. Studio Music Study",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2310,
+    "name": "Choir Level 3 Concert",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2311,
+    "name": "Choir Level 3 S/A?",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2312,
+    "name": "Choir Level 3T/Bo",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2314,
+    "name": "Adv.Wmns Choir (Illumin.)",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2315,
+    "name": "Choir Level 3 Chamber",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2321,
+    "name": "AP Music Theory",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 2322,
+    "name": "CE Intro to Music",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2409,
+    "name": "Orchestra Level 3",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2504,
+    "name": "Theatre Level 3 (Beginning)",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2505,
+    "name": "Creative Film History",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2512,
+    "name": "Productions 1",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2513,
+    "name": "Musical Theatre",
+    "department": "Fine Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 2514,
+    "name": "Beginning Stage Craft",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 2603,
+    "name": "Beg. Dance 2A",
+    "department": "Physical Education",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 2606,
+    "name": "Dance Company",
+    "department": "Physical Education",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3110,
+    "name": "Spanish!",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 3117,
+    "name": "CESpanishBridge>",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3120,
+    "name": "Spanish 2CE",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3130,
+    "name": "Spanish 3CE",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3140,
+    "name": "Spanish 4CE",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3150,
+    "name": "Spanish S/AP >",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 3210,
+    "name": "FrenchI",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 3220,
+    "name": "French 2CE",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3230,
+    "name": "French 3 CE",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 3250,
+    "name": "French 4/5A",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 3510,
+    "name": "Am Sign Lang 1",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 3520,
+    "name": "Am Sign Lang 2",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 3530,
+    "name": "Am Sign Lang 3",
+    "department": "World Languages",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4010,
+    "name": "Health 2",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4080,
+    "name": "English 106",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4085,
+    "name": "English 10 Hon >",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "Honors"
+  },
+  {
+    "id": 4100,
+    "name": "English 116",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4105,
+    "name": "English 11 Hon/AP",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 4150,
+    "name": "English 12",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4205,
+    "name": "CE Engl. Literature 2200\u00b0",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4240,
+    "name": "Debate!",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4290,
+    "name": "CE Comm. 2110",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4294,
+    "name": "CE English 1005",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4295,
+    "name": "CE English 1010",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4300,
+    "name": "CE English 2010\"",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4310,
+    "name": "AP Language",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 4315,
+    "name": "APLit &Composition >",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 4335,
+    "name": "Creative Writing 1 >",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4340,
+    "name": "Creative Writing 2 >",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4343,
+    "name": "Creative Writing 3 >",
+    "department": "Language Arts",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4345,
+    "name": "Journalism 16",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4350,
+    "name": "Journalism 2",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4365,
+    "name": "Yearbook 1",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4370,
+    "name": "Yearbook 2",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4390,
+    "name": "Debate 2",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4540,
+    "name": "World History >",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4550,
+    "name": "USHistory >",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 4555,
+    "name": "CEUSHistory1700",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4560,
+    "name": "USGov& Citizenship |",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4566,
+    "name": "CEUS Gov\" $",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4570,
+    "name": "Psychology >",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4571,
+    "name": "Abnormal Psychology",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4573,
+    "name": "CE Psychology",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4574,
+    "name": "CE Sports Psych",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 4591,
+    "name": "AP World History",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 4593,
+    "name": "AP US History",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 4594,
+    "name": "APUSGov&Politics",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 4595,
+    "name": "AP ComparativeGov",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 4597,
+    "name": "AP Micro/MacroEcon.",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 4598,
+    "name": "AP Psychology",
+    "department": "Social Studies",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 4601,
+    "name": "Sociology",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4603,
+    "name": "History of World Religions",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 4612,
+    "name": "History of Film",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 5300,
+    "name": "Sec. Math 2",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 5305,
+    "name": "H Sec Math 2",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 5400,
+    "name": "Sec Math 3p",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 5405,
+    "name": "H Sec Math 3",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 5510,
+    "name": "AP Statistics",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 5520,
+    "name": "AP Calculus AB >",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 5530,
+    "name": "AP Calculus BC >",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 5610,
+    "name": "CE Math 1010",
+    "department": "Mathematics",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 5620,
+    "name": "CE Math 1030",
+    "department": "Mathematics",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 5640,
+    "name": "CE Math 1050",
+    "department": "Mathematics",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 5830,
+    "name": "Math For Life >",
+    "department": "Mathematics",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6200,
+    "name": "Biology",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6230,
+    "name": "AP Biology >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 6264,
+    "name": "Marine Biology CE",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 6265,
+    "name": "Adv Marine Biology >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6267,
+    "name": "Botany Fall: Mstr.Gard.\u00a2",
+    "department": "Science",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 6269,
+    "name": "Botany Spring: Plant Sci.",
+    "department": "Science",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 6270,
+    "name": "Ornithology >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6271,
+    "name": "Adv Ornithology >",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6321,
+    "name": "CE Geology 1110",
+    "department": "Science",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 6326,
+    "name": "Astronomy",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6400,
+    "name": "Chemistry >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6430,
+    "name": "AP Chemistry >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 6440,
+    "name": "CE Chem 1010",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 6450,
+    "name": "CEChem 1110",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 6500,
+    "name": "Physics >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 6530,
+    "name": "AP Physics-1d",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 6532,
+    "name": "AP Phys. C-Mech. (Calc)",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 6533,
+    "name": "AP Phys. C-Elect. (Calc)",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 6540,
+    "name": "CE Physics 1010o",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 6950,
+    "name": "CE Biology 1010",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7075,
+    "name": "Gen. Financial LiteracyCE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7216,
+    "name": "Teaching Profession 2/3(7217) |",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7301,
+    "name": "CE Biotechnology",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7303,
+    "name": "Emergency Medical Resp CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7305,
+    "name": "Exercise Sci./Sports Med. CE\u201cYR CT 7415 Early Child. Ed. 3\"",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7308,
+    "name": "Intro Health Science",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7309,
+    "name": "Med. Anatomy/Phys.",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 7315,
+    "name": "Medical Forensics >",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 7316,
+    "name": "Med Assisting Seniors 1\"",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7319,
+    "name": "CNACert. Nurse Asst.",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7320,
+    "name": "Pharmacy Tech Seniors 1Sem =",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 7323,
+    "name": "Intro to Physical Therapy",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7326,
+    "name": "Advanced Anatomy\" \u2014",
+    "department": "Science",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7327,
+    "name": "CE Medical Scholars\u201d",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7410,
+    "name": "Child Development CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7412,
+    "name": "Early Child. Ed. 1CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7413,
+    "name": "Early Child. Ed. 2 CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7417,
+    "name": "CEHuman Development",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7433,
+    "name": "SewingConst.&Textiles",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7440,
+    "name": "Fashion Design Studio",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7445,
+    "name": "Interior Design 1",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7448,
+    "name": "CE Interior Design 2",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7449,
+    "name": "Interior Design 3",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7454,
+    "name": "CEFam. Rel. &Fin.Lit.\\",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7460,
+    "name": "Foods/Nutrition 1",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7461,
+    "name": "Dietetics & Nutrition (Foods 2)SEM CT 7755 Digital Media 2CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7464,
+    "name": "CE Found. of Nutrition",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7465,
+    "name": "Culinary Arts - CE",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7469,
+    "name": "Prostart 1",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7471,
+    "name": "Baking & Pastry",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7501,
+    "name": "Accounting | CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7502,
+    "name": "Accounting 2 CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7510,
+    "name": "Bus. Leadership Capst.CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7515,
+    "name": "BusinessComm.1CE",
+    "department": "Language Arts",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7520,
+    "name": "Business Law",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7525,
+    "name": "Business ManagementCE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7530,
+    "name": "Bus Office Specialist CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7532,
+    "name": "Customer Service CE\u201d",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7539,
+    "name": "Digital Marketing CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7542,
+    "name": "Entrepreneurship CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7550,
+    "name": "Hospitality and Tourism CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7554,
+    "name": "Influencer and Content Mktg.",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7560,
+    "name": "Marketing| CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7563,
+    "name": "RealEstate",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7565,
+    "name": "Retailing CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7570,
+    "name": "Sports & Outdoor Rec. Mktg.",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7603,
+    "name": "Video Production 1",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7610,
+    "name": "Audio Production 1&2 (7612)",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7614,
+    "name": "Pilot & Aviation Ground (7615)",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7620,
+    "name": "Construction Mgmt. Intro. (7630)",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7630,
+    "name": "Law Enforcement",
+    "department": "Social Studies",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7632,
+    "name": "Construction Mgmt. Adv (7634)",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7642,
+    "name": "Intro to Automotive CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7644,
+    "name": "ASE Automotive Chassis CE",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7647,
+    "name": "Pilot & Aviation 2",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7656,
+    "name": "ASE Automotive Engine CE",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7661,
+    "name": "Drones Pilot CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7662,
+    "name": "Drones Maintenance (7664)",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7663,
+    "name": "Drones Capstone (7665)",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7686,
+    "name": "Composites 1",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7687,
+    "name": "Composites 2",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7693,
+    "name": "Graphic Design (7694)",
+    "department": "Fine Arts",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7696,
+    "name": "Commercial Photo. 1CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7697,
+    "name": "Commercial Photography 2",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7698,
+    "name": "Digital Illustration",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7701,
+    "name": "3D Animation CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7702,
+    "name": "3D Graphics CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7706,
+    "name": "Adv. Computer Programming",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7712,
+    "name": "AP Comp. Sci. A",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "AP"
+  },
+  {
+    "id": 7734,
+    "name": "Computer Programming1",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7735,
+    "name": "Comp.Programming2CE",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7740,
+    "name": "Comp. Sci. Principles CE",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7746,
+    "name": "Cyber Forensics",
+    "department": "Science",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7748,
+    "name": "Cyber Defense & Ethics",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7752,
+    "name": "Digital Media 1",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7756,
+    "name": "2D Animation",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7764,
+    "name": "CE Gaming Development 1",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Concurrent Enrollment"
+  },
+  {
+    "id": 7766,
+    "name": "Gaming Development 2",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7795,
+    "name": "Web Development 1",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7796,
+    "name": "Web Development 2",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 7896,
+    "name": "Engineering Capstone",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "AP"
+  },
+  {
+    "id": 7912,
+    "name": "CTE Internship",
+    "department": "Elective",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 8008,
+    "name": "UTECH Drafting and Design",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8013,
+    "name": "UTECH Intro to Info Tech",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8048,
+    "name": "UTECH HVAC",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8055,
+    "name": "UTECH Intro to Automotive",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8063,
+    "name": "UTECH Machinist",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8070,
+    "name": "UTECH Medical Assist",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8078,
+    "name": "UTECH Nurse Assist (CNA)",
+    "department": "CTE",
+    "credits": 0.5,
+    "level": "Standard"
+  },
+  {
+    "id": 8080,
+    "name": "UTECH Pharmacy Tech",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8083,
+    "name": "UTECH Plumbing",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8086,
+    "name": "UTECH Software Dev",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8093,
+    "name": "UTECH Web Dev",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8095,
+    "name": "UTECH Welding Tech",
+    "department": "CTE",
+    "credits": 1.0,
+    "level": "Standard"
+  },
+  {
+    "id": 8108,
+    "name": "Cosmetology - Avalon",
+    "department": "Elective",
+    "credits": 1.0,
+    "level": "Standard"
+  }
+]

@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "5500:5500"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    environment:
+      - FLASK_ENV=production
+      - FLASK_SECRET_KEY=${FLASK_SECRET_KEY}

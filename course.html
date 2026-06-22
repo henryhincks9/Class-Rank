@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="courses.html">All Courses</a>
+    <a href="rankings.html">Rankings</a>
+</nav>
+<h1 id="courseName">
+    Loading... 
+</h1>
+<p id="department">
+    </p>
+    <h2>Course Statistics</h2>
+    <p>Average Difficulty: <span id="averageDifficulty">0</span></p>
+    <p>Average Enjoyment: <span id="averageEnjoyment">0</span></p>
+    <p>Average Workload: <span id="averageWorkload">0</span></p>
+<h2>Reviews</h2>
+<div id="reviews"></div>
+<h2>Leave Review</h2>
+<form id="reviewForm">
+
+<label>Difficulty:</label>
+
+<select id="difficulty">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<br><br>
+
+<label>Enjoyment:</label>
+
+<select id="enjoyment">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<br><br>
+
+<label>Workload:</label>
+
+<select id="workload">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<br><br>
+
+<textarea
+    id="reviewText"
+    placeholder="Write review..."
+></textarea>
+
+<br><br>
+
+<button type="submit">
+    Submit Review
+</button>
+
+</form>
+<script src="js/coursePage.js"></script>
+</body>
+</html>
