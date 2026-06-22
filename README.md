@@ -72,7 +72,7 @@ Render gives you an HTTPS URL like `https://<your-app>.onrender.com` automatical
   - username: `admin`
   - password: `admin123`
 - Students and staff can register from the login page using a Davis School District email.
-- Only a valid `@davis.k12.ut.us` address can be used to register and post reviews.
+- Only a valid `@go.dsdmail.net` address can be used to register and post reviews.
 - Users can log in with either their username or their school email.
 - Registered users can post reviews after logging in.
 - Admin users can delete reviews from the course detail page.

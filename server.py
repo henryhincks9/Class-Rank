@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
 DB_FILE = DATA_DIR / "app.db"
 COURSES_FILE = DATA_DIR / "courses.json"
+SCHOOL_EMAIL_DOMAIN = "@go.dsdmail.net"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -101,7 +102,7 @@ def init_db():
     if not cursor.fetchone():
         cursor.execute(
             "INSERT INTO users (username, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)",
-            ("admin", "admin@davis.k12.ut.us", generate_password_hash("admin123"), "admin", datetime.now(timezone.utc).isoformat()),
+            ("admin", f"admin{SCHOOL_EMAIL_DOMAIN}", generate_password_hash("admin123"), "admin", datetime.now(timezone.utc).isoformat()),
         )
         conn.commit()
     conn.close()
@@ -120,7 +121,7 @@ def is_valid_email(email):
 def is_davis_district_email(email):
     if not is_valid_email(email):
         return False
-    return email.strip().lower().endswith("@davis.k12.ut.us")
+    return email.strip().lower().endswith(SCHOOL_EMAIL_DOMAIN)
 
 
 def get_user_by_username(username):
@@ -276,13 +277,13 @@ def register():
     password = payload.get("password", "")
     email = payload.get("email", "").strip().lower()
     if not username or not password or not email:
-        return jsonify({"message": "Username, password, and Davis district email are required."}), 400
+        return jsonify({"message": "Username, password, and school email are required."}), 400
     if not is_valid_username(username):
         return jsonify({"message": "Username must be 3-30 chars (letters, numbers, _.-)."}), 400
     if not is_valid_password(password):
         return jsonify({"message": "Password must be at least 6 characters."}), 400
     if not is_davis_district_email(email):
-        return jsonify({"message": "A valid Davis School District email (davis.k12.ut.us) is required."}), 400
+        return jsonify({"message": f"A valid Davis School District email ({SCHOOL_EMAIL_DOMAIN}) is required."}), 400
     if get_user_by_username(username):
         return jsonify({"message": "Username already exists."}), 400
     conn = get_db()
@@ -380,7 +381,7 @@ def reviews():
     if len(review_text) > 2000:
         return jsonify({"message": "Review too long."}), 400
     if not user.get("email") or not is_davis_district_email(user["email"]):
-        return jsonify({"message": "A valid Davis School District email is required to post a review."}), 403
+        return jsonify({"message": f"A valid Davis School District email ({SCHOOL_EMAIL_DOMAIN}) is required to post a review."}), 403
 
     review_id = add_review(
         course_id,

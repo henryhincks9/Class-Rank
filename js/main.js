@@ -449,6 +449,12 @@ function attachEventHandlers() {
             const username = document.getElementById("registerUsername").value.trim();
             const email = document.getElementById("registerEmail").value.trim().toLowerCase();
             const password = document.getElementById("registerPassword").value;
+            const requiredDomain = "@go.dsdmail.net";
+
+            if (!email.endsWith(requiredDomain)) {
+                authMessage.textContent = `Please use your Davis School District email (${requiredDomain}).`;
+                return;
+            }
 
             fetch(api.register, {
                 method: "POST",

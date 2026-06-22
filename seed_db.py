@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 ADMIN_USER = os.environ.get('FLASK_ADMIN_USER', 'admin')
 ADMIN_PW = os.environ.get('FLASK_ADMIN_PW', None)
-ADMIN_EMAIL = os.environ.get('FLASK_ADMIN_EMAIL', 'admin@davis.k12.ut.us')
+ADMIN_EMAIL = os.environ.get('FLASK_ADMIN_EMAIL', 'admin@go.dsdmail.net')
 
 if __name__ == '__main__':
     init_db()
@@ -49,7 +49,7 @@ if __name__ == '__main__':
             if r:
                 demo_user_id = r[0]
             else:
-                cur.execute("INSERT INTO users (username, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)", ('demo_user', 'demo_user@davis.k12.ut.us', generate_password_hash('demo_pass'), 'user', datetime.now(timezone.utc).isoformat()))
+                cur.execute("INSERT INTO users (username, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)", ('demo_user', 'demo_user@go.dsdmail.net', generate_password_hash('demo_pass'), 'user', datetime.now(timezone.utc).isoformat()))
                 demo_user_id = cur.lastrowid
 
             sample_texts = [

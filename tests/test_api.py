@@ -35,7 +35,7 @@ def test_register_login_logout(client):
     username = 'testuser1'
     password = 'password123'
     # Register
-    rv = client.post('/api/register', json={'username': username, 'email': 'testuser1@davis.k12.ut.us', 'password': password})
+    rv = client.post('/api/register', json={'username': username, 'email': 'testuser1@go.dsdmail.net', 'password': password})
     # OK if created or already exists
     assert rv.status_code in (200, 201, 400)
 
@@ -44,10 +44,10 @@ def test_register_login_logout(client):
     assert rv.status_code == 200
     data = rv.get_json()
     assert data['user']['username'] == username
-    assert data['user']['email'] == 'testuser1@davis.k12.ut.us'
+    assert data['user']['email'] == 'testuser1@go.dsdmail.net'
 
     # Login by email
-    rv = client.post('/api/login', json={'username': 'testuser1@davis.k12.ut.us', 'password': password})
+    rv = client.post('/api/login', json={'username': 'testuser1@go.dsdmail.net', 'password': password})
     assert rv.status_code == 200
     data = rv.get_json()
     assert data['user']['username'] == username
@@ -87,7 +87,7 @@ def test_admin_user_listing_and_role_change(client):
     assert isinstance(users, list)
 
     # pick a user (create one first)
-    rv = client.post('/api/register', json={'username': 'promote_me', 'email': 'promote_me@davis.k12.ut.us', 'password': 'password123'})
+    rv = client.post('/api/register', json={'username': 'promote_me', 'email': 'promote_me@go.dsdmail.net', 'password': 'password123'})
     # OK if created or already exists
     assert rv.status_code in (200, 201, 400)
 
@@ -108,7 +108,7 @@ def test_admin_user_listing_and_role_change(client):
 
 def test_flag_and_delete_review(client):
     # create and login as regular user, then post a review
-    rv = client.post('/api/register', json={'username': 'promote_me', 'email': 'promote_me@davis.k12.ut.us', 'password': 'password123'})
+    rv = client.post('/api/register', json={'username': 'promote_me', 'email': 'promote_me@go.dsdmail.net', 'password': 'password123'})
     assert rv.status_code in (200, 201)
     rv = client.post('/api/login', json={'username': 'promote_me', 'password': 'password123'})
     assert rv.status_code == 200
