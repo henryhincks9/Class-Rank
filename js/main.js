@@ -4,6 +4,7 @@
     courses: document.getElementById("coursesSection"),
     course: document.getElementById("courseSection"),
     rankings: document.getElementById("rankingsSection"),
+    admin: document.getElementById("adminSection"),
 };
 
 const navButtons = document.querySelectorAll("[data-nav]");

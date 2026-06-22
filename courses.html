@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
-    <h1>All Courses</h1>
+    <div class="header-top">
+        <div>
+            <h1>All Courses</h1>
+            <p>Search classes by name or department.</p>
+        </div>
+    </div>
     <nav class="site-nav">
         <a href="index.html">Home</a>
+        <a href="courses.html" class="active">Courses</a>
         <a href="rankings.html">Rankings</a>
     </nav>
 </header>
-<input id="searchBar" placeholder="Search courses...">
-<div id="courseContainer"></div>
+<main>
+    <section class="page-section">
+        <div class="search-panel">
+            <label for="searchBar">Filter courses</label>
+            <input id="searchBar" placeholder="Search courses...">
+        </div>
+        <div id="courseContainer" class="cards-grid"></div>
+    </section>
+</main>
 <script src="js/courses.js" defer></script>
 </body>
 </html>

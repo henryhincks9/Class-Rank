@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Rankings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="courses.html">All Courses</a>
-</nav>
-<h1>Top Rated Courses</h1>
-<div id="rankings"></div>
+<header>
+    <div class="header-top">
+        <div>
+            <h1>Top Rated Courses</h1>
+            <p>See which classes students rate highest.</p>
+        </div>
+    </div>
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="rankings.html" class="active">Rankings</a>
+    </nav>
+</header>
+<main>
+    <section class="page-section">
+        <div id="rankings" class="cards-grid"></div>
+    </section>
+</main>
 <script src="js/rankings.js"></script>
 </body>
 

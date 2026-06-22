@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Rank</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
@@ -28,8 +28,11 @@
 </header>
 <main>
     <section id="homeSection" class="page-section">
-        <h2>Welcome</h2>
-        <p>Search and explore courses, read reviews, and see top-rated classes all from one page.</p>
+        <div class="section-heading">
+            <p class="eyebrow">Course reviews made simple</p>
+            <h2>Find classes with less guesswork.</h2>
+            <p>Search courses, compare rankings, and read student reviews before building your schedule.</p>
+        </div>
         <div class="quick-links">
             <button data-nav="courses">Browse Courses</button>
             <button data-nav="rankings">View Rankings</button>
@@ -76,7 +79,10 @@
     </section>
 
     <section id="coursesSection" class="page-section hidden">
-        <h2>All Courses</h2>
+        <div class="section-heading">
+            <p class="eyebrow">Explore</p>
+            <h2>All Courses</h2>
+        </div>
         <div class="search-panel">
             <label for="coursesSearch">Filter courses</label>
             <input type="text" id="coursesSearch" placeholder="Search courses...">
@@ -85,7 +91,7 @@
     </section>
 
     <section id="courseSection" class="page-section hidden">
-        <button id="backToCourses" class="secondary-button">← Back to Courses</button>
+        <button id="backToCourses" class="secondary-button">Back to Courses</button>
         <h2 id="courseName">Loading...</h2>
         <p id="department"></p>
         <div class="stats-card">
@@ -139,7 +145,10 @@
     </section>
 
     <section id="rankingsSection" class="page-section hidden">
-        <h2>Top Rated Courses</h2>
+        <div class="section-heading">
+            <p class="eyebrow">Compare</p>
+            <h2>Top Rated Courses</h2>
+        </div>
         <div id="rankingsContainer" class="cards-grid"></div>
     </section>
 
