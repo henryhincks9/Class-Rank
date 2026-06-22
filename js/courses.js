@@ -1,5 +1,50 @@
 let courses = [];
 const searchBar = document.getElementById('searchBar');
+const themeToggle = document.getElementById('themeToggle');
+const THEME_STORAGE_KEY = 'class-rank-theme';
+
+function applyTheme(theme) {
+    const chosenTheme = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', chosenTheme);
+    if (themeToggle) {
+        const nextThemeLabel = chosenTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        const nextThemeAria = chosenTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        themeToggle.textContent = nextThemeLabel;
+        themeToggle.setAttribute('aria-label', nextThemeAria);
+    }
+}
+
+function initializeTheme() {
+    let storedTheme;
+    try {
+        storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    } catch {
+        storedTheme = null;
+    }
+
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+        applyTheme(storedTheme);
+        return;
+    }
+
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        try {
+            localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+        } catch {
+            // Ignore storage failures in locked-down browsers.
+        }
+    });
+}
+
+initializeTheme();
 
 fetch('data/courses.json')
     .then(response => response.json())

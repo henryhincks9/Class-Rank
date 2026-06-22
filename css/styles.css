@@ -1,5 +1,6 @@
 :root {
     --page: #f2f6fb;
+    --page-top: #ffffff;
     --surface: #ffffff;
     --surface-soft: #f0f6ff;
     --text: #0f1720;
@@ -10,6 +11,25 @@
     --blue-soft: #e3efff;
     --danger: #b42318;
     --shadow: 0 10px 24px rgba(9, 23, 45, 0.08);
+    --header-top: #ffffff;
+    --header-bottom: #f7fbff;
+}
+
+[data-theme="dark"] {
+    --page: #0b1220;
+    --page-top: #0f172a;
+    --surface: #111827;
+    --surface-soft: #1b2a42;
+    --text: #e5edf9;
+    --muted: #9fb0c7;
+    --line: #2a3b56;
+    --blue: #4d9fff;
+    --blue-dark: #7db8ff;
+    --blue-soft: #163053;
+    --danger: #ff8b80;
+    --shadow: 0 12px 28px rgba(2, 8, 23, 0.4);
+    --header-top: #0f172a;
+    --header-bottom: #111b30;
 }
 
 * {
@@ -18,7 +38,7 @@
 
 body {
     margin: 0;
-    background: linear-gradient(180deg, #ffffff 0%, var(--page) 100%);
+    background: linear-gradient(180deg, var(--page-top) 0%, var(--page) 100%);
     color: var(--text);
     font-family: "Segoe UI", "Tahoma", sans-serif;
     line-height: 1.5;
@@ -34,7 +54,7 @@ a:hover {
 }
 
 header {
-    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    background: linear-gradient(180deg, var(--header-top) 0%, var(--header-bottom) 100%);
     border-bottom: 1px solid var(--line);
     padding: 24px clamp(16px, 4vw, 44px);
 }
@@ -100,7 +120,7 @@ header p,
     justify-content: center;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: #ffffff;
+    background: var(--surface);
     color: var(--text);
     padding: 10px 16px;
     font: inherit;
@@ -209,7 +229,7 @@ form button:hover {
 }
 
 label {
-    color: #1f2937;
+    color: var(--text);
     font-weight: 700;
 }
 

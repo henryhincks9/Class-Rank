@@ -32,6 +32,9 @@ const logoutButton = document.getElementById("logoutButton");
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
 const authMessage = document.getElementById("authMessage");
+const themeToggle = document.getElementById("themeToggle");
+
+const THEME_STORAGE_KEY = "class-rank-theme";
 
 const api = {
     courses: "/api/courses",
@@ -46,6 +49,34 @@ const api = {
 let courses = [];
 let currentCourseId = null;
 let currentUser = null;
+
+function applyTheme(theme) {
+    const chosenTheme = theme === "dark" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", chosenTheme);
+    if (themeToggle) {
+        const nextThemeLabel = chosenTheme === "dark" ? "Light Mode" : "Dark Mode";
+        const nextThemeAria = chosenTheme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+        themeToggle.textContent = nextThemeLabel;
+        themeToggle.setAttribute("aria-label", nextThemeAria);
+    }
+}
+
+function initializeTheme() {
+    let storedTheme;
+    try {
+        storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    } catch {
+        storedTheme = null;
+    }
+
+    if (storedTheme === "light" || storedTheme === "dark") {
+        applyTheme(storedTheme);
+        return;
+    }
+
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    applyTheme(prefersDark ? "dark" : "light");
+}
 
 function hideAllSections() {
     Object.values(sections).forEach(section => section.classList.add("hidden"));
@@ -411,6 +442,19 @@ function attachEventHandlers() {
         });
     }
 
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+            const nextTheme = currentTheme === "dark" ? "light" : "dark";
+            applyTheme(nextTheme);
+            try {
+                localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+            } catch {
+                // Ignore storage failures in locked-down browsers.
+            }
+        });
+    }
+
     if (adminNavButton) {
         adminNavButton.addEventListener("click", () => navigateTo("admin"));
     }
@@ -550,4 +594,5 @@ function init() {
         });
 }
 
+initializeTheme();
 init();
