@@ -1,13 +1,17 @@
 services:
   - type: web
     name: class-rank
-    env: python
+    runtime: python
     plan: free
     region: oregon
     buildCommand: pip install -r requirements.txt
+    preDeployCommand: python migrate.py && python seed_db.py
     startCommand: gunicorn -w 4 -b 0.0.0.0:$PORT server:app
+    healthCheckPath: /api/health
     envVars:
       - key: FLASK_SECRET_KEY
-        value: ""
-      - key: DATABASE_URL
-        value: ""
+        generateValue: true
+      - key: FLASK_ADMIN_PW
+        sync: false
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
